@@ -38,7 +38,7 @@ namespace APIW.Movies.Services
 
         public async Task<ICollection<CategoryDto>> GetCategoriesAsync()
         {
-            var categories =  _categoryRepository.GetCategoriesAsync();//llamo el metodo del repositorio
+            var categories = await _categoryRepository.GetCategoriesAsync();//llamo el metodo del repositorio
             return _mapper.Map<ICollection<CategoryDto>>(categories);//mapeo los datos obtenidos del repositorio a DTOs
             
         }

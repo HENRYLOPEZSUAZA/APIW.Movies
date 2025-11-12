@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace APIW.Movies.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251103213351_InitialDB")]
+    [Migration("20251112022425_InitialDB")]
     partial class InitialDB
     {
         /// <inheritdoc />
@@ -36,7 +36,7 @@ namespace APIW.Movies.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("ModifiedDate")
+                    b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
